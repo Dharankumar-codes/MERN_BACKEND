@@ -1,0 +1,1501 @@
+============================================================
+
+DAY 2 - JAVASCRIPT BASICS & LOOPINGS
+
+============================================================
+
+TOPICS:
+
+1. Truthy and Falsy Values
+
+2. Difference Between var, let and const
+
+3. Increment and Decrement
+
+4. for Loop
+
+5. Loop Execution Flow
+
+6. Single Value Output
+
+7. Multiple Value Output
+
+8. Loop with Conditions
+
+9. Number Programs
+
+10. Pattern Programs
+
+11. Nested for Loop
+
+12. Nested Loop Patterns
+
+============================================================
+
+1. TRUTHY AND FALSY VALUES
+
+============================================================
+
+NOTES:
+
+In JavaScript, every value can behave like true or false when it is
+
+used inside a condition. A value that behaves like true is called a
+
+Truthy value. A value that behaves like false is called a Falsy value.
+
+Truthy and Falsy values are mainly useful when working with if
+
+conditions, logical operators and validations. JavaScript automatically
+
+converts the given value into a Boolean value while checking a condition.
+
+-------------------------
+
+FALSY VALUES
+
+-------------------------
+
+JavaScript has these common falsy values:
+
+false
+
+0
+
+-0
+
+""
+
+''
+
+null
+
+undefined
+
+NaN
+
+Example:
+
+if(0) {
+
+console.log("True");
+
+} else {
+
+console.log("False");
+
+}
+
+Output:
+
+False
+
+Example:
+
+let name = "";
+
+if(name) {
+
+console.log("Name Available");
+
+} else {
+
+console.log("Name Not Available");
+
+}
+
+Output:
+
+Name Not Available
+
+-------------------------
+
+TRUTHY VALUES
+
+-------------------------
+
+Most values other than falsy values are Truthy.
+
+Examples:
+
+true
+
+1
+
+-1
+
+10
+
+"hello"
+
+" "
+
+[]
+
+{}
+
+[1, 2]
+
+{ name: "Bala" }
+
+Example:
+
+if("hello") {
+
+console.log("Truthy Value");
+
+}
+
+Output:
+
+Truthy Value
+
+IMPORTANT:
+
+"0" is Truthy because it is a String.
+
+0 is Falsy because it is a Number.
+
+Example:
+
+console.log(Boolean(0)); // false
+
+console.log(Boolean("0")); // true
+
+console.log(Boolean("")); // false
+
+console.log(Boolean("Hello")); // true
+
+console.log(Boolean(null)); // false
+
+console.log(Boolean([])); // true
+
+console.log(Boolean({})); // true
+
+============================================================
+
+2. DIFFERENCE BETWEEN VAR, LET AND CONST
+
+============================================================
+
+NOTES:
+
+var, let and const are keywords used to create variables in JavaScript.
+
+The main differences between them are redeclaration, reassignment and
+
+scope. var is the older way of declaring variables, while let and const
+
+were introduced in ES6.
+
+Use let when the value needs to change later. Use const when the
+
+variable should not be reassigned. In modern JavaScript, const and let
+
+are generally preferred over var.
+
+-------------------------
+
+VAR
+
+-------------------------
+
+Syntax:
+
+var variableName = value;
+
+Example:
+
+var name = "Bala";
+
+Redeclaration is allowed:
+
+var name = "Bala";
+
+var name = "Kumar";
+
+console.log(name);
+
+Output:
+
+Kumar
+
+Reassignment is allowed:
+
+var age = 20;
+
+age = 25;
+
+console.log(age);
+
+Output:
+
+25
+
+var is Function Scoped.
+
+Example:
+
+if(true) {
+
+var a = 10;
+
+}
+
+console.log(a);
+
+Output:
+
+10
+
+-------------------------
+
+LET
+
+-------------------------
+
+Syntax:
+
+let variableName = value;
+
+Example:
+
+let age = 20;
+
+Redeclaration is NOT allowed:
+
+let age = 20;
+
+let age = 25;
+
+Error
+
+Reassignment is allowed:
+
+let age = 20;
+
+age = 25;
+
+console.log(age);
+
+Output:
+
+25
+
+let is Block Scoped.
+
+Example:
+
+if(true) {
+
+let a = 10;
+
+}
+
+console.log(a);
+
+Output:
+
+Error
+
+-------------------------
+
+CONST
+
+-------------------------
+
+Syntax:
+
+const variableName = value;
+
+Example:
+
+const country = "India";
+
+Redeclaration is NOT allowed.
+
+const country = "India";
+
+const country = "USA";
+
+Error
+
+Reassignment is NOT allowed.
+
+const country = "India";
+
+country = "USA";
+
+Error
+
+const is Block Scoped.
+
+-------------------------
+
+QUICK DIFFERENCE
+
+-------------------------
+
+var
+
+- Redeclaration -> Yes
+
+- Reassignment -> Yes
+
+- Scope -> Function Scope
+
+let
+
+- Redeclaration -> No
+
+- Reassignment -> Yes
+
+- Scope -> Block Scope
+
+const
+
+- Redeclaration -> No
+
+- Reassignment -> No
+
+- Scope -> Block Scope
+
+Best Practice:
+
+const -> Default choice
+
+let -> Use when value changes
+
+var -> Avoid in modern JavaScript when possible
+
+============================================================
+
+3. INCREMENT AND DECREMENT
+
+============================================================
+
+NOTES:
+
+Increment is used to increase a number and decrement is used to decrease
+
+a number. These operators are very important in looping because the loop
+
+needs to move from one value to another.
+
+++ increases the value by 1 and -- decreases the value by 1.
+
+Increment:
+
+let a = 1;
+
+a++;
+
+console.log(a);
+
+Output:
+
+2
+
+Decrement:
+
+let a = 5;
+
+a--;
+
+console.log(a);
+
+Output:
+
+4
+
+Other ways:
+
+a = a + 1;
+
+a += 1;
+
+a++;
+
+All can be used to increase the value.
+
+============================================================
+
+4. FOR LOOP
+
+============================================================
+
+NOTES:
+
+A loop is used to execute the same block of code repeatedly. Instead of
+
+writing the same statement many times, we can use a loop and control how
+
+many times the code should execute.
+
+The for loop is commonly used when we know how many times the code needs
+
+to run. A for loop contains three important parts: initialization,
+
+condition and increment/decrement.
+
+Syntax:
+
+for(initialization; condition; increment/decrement) {
+
+// code
+
+}
+
+Example:
+
+for(let i = 1; i <= 5; i++) {
+
+console.log(i);
+
+}
+
+Output:
+
+1
+
+2
+
+3
+
+4
+
+5
+
+============================================================
+
+5. HOW FOR LOOP WORKS
+
+============================================================
+
+Consider:
+
+for(let i = 1; i <= 5; i++) {
+
+console.log(i);
+
+}
+
+Step 1:
+
+let i = 1
+
+Initialization happens only once.
+
+Step 2:
+
+i <= 5
+
+Condition is checked.
+
+Step 3:
+
+console.log(i)
+
+Loop body executes.
+
+Step 4:
+
+i++
+
+Value increases.
+
+Step 5:
+
+Condition is checked again.
+
+Flow:
+
+Initialization
+
+↓
+
+Condition
+
+↓
+
+true?
+
+/ \
+
+yes no
+
+↓ ↓
+
+Code Stop
+
+↓
+
+Increment
+
+↓
+
+Condition Again
+
+============================================================
+
+6. SINGLE VALUE LOOPING
+
+============================================================
+
+Single value looping means printing or processing one value during
+
+each iteration.
+
+Example 1:
+
+Print 1 to 10.
+
+for(let i = 1; i <= 10; i++) {
+
+console.log(i);
+
+}
+
+Output:
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+-------------------------
+
+PRINT 10 TO 1
+
+-------------------------
+
+for(let i = 10; i >= 1; i--) {
+
+console.log(i);
+
+}
+
+Output:
+
+10
+
+9
+
+8
+
+7
+
+6
+
+5
+
+4
+
+3
+
+2
+
+1
+
+-------------------------
+
+PRINT EVEN NUMBERS
+
+-------------------------
+
+for(let i = 2; i <= 10; i += 2) {
+
+console.log(i);
+
+}
+
+Output:
+
+2
+
+4
+
+6
+
+8
+
+10
+
+-------------------------
+
+PRINT ODD NUMBERS
+
+-------------------------
+
+for(let i = 1; i <= 10; i += 2) {
+
+console.log(i);
+
+}
+
+Output:
+
+1
+
+3
+
+5
+
+7
+
+9
+
+============================================================
+
+7. LOOP WITH CONDITION
+
+============================================================
+
+We can use if conditions inside loops to decide which values should
+
+be processed.
+
+Example:
+
+for(let i = 1; i <= 10; i++) {
+
+if(i % 2 === 0) {
+
+console.log(i);
+
+}
+
+}
+
+Output:
+
+2
+
+4
+
+6
+
+8
+
+10
+
+Odd Numbers:
+
+for(let i = 1; i <= 10; i++) {
+
+if(i % 2 !== 0) {
+
+console.log(i);
+
+}
+
+}
+
+Output:
+
+1
+
+3
+
+5
+
+7
+
+9
+
+============================================================
+
+8. MULTIPLE VALUE OUTPUT
+
+============================================================
+
+Multiple value output means generating more than one value or building
+
+multiple values during the loop.
+
+One common example is multiplication tables.
+
+Example:
+
+let num = 5;
+
+for(let i = 1; i <= 10; i++) {
+
+console.log(num + " x " + i + " = " + (num * i));
+
+}
+
+Output:
+
+5 x 1 = 5
+
+5 x 2 = 10
+
+5 x 3 = 15
+
+5 x 4 = 20
+
+5 x 5 = 25
+
+5 x 6 = 30
+
+5 x 7 = 35
+
+5 x 8 = 40
+
+5 x 9 = 45
+
+5 x 10 = 50
+
+============================================================
+
+9. SUM USING LOOP
+
+============================================================
+
+Sometimes a loop needs to calculate and store a result instead of
+
+simply printing values.
+
+For this, create a variable outside the loop and update it during
+
+every iteration.
+
+Example:
+
+let sum = 0;
+
+for(let i = 1; i <= 5; i++) {
+
+sum = sum + i;
+
+}
+
+console.log(sum);
+
+Calculation:
+
+0 + 1 = 1
+
+1 + 2 = 3
+
+3 + 3 = 6
+
+6 + 4 = 10
+
+10 + 5 = 15
+
+Output:
+
+15
+
+============================================================
+
+10. STRING BUILDING USING LOOP
+
+============================================================
+
+A loop can also create multiple values in the same line by storing
+
+them inside a variable.
+
+Example:
+
+let result = "";
+
+for(let i = 1; i <= 5; i++) {
+
+result = result + i + " ";
+
+}
+
+console.log(result);
+
+Output:
+
+1 2 3 4 5
+
+============================================================
+
+11. PATTERN PROGRAM
+
+============================================================
+
+NOTES:
+
+Pattern programs are useful for understanding how loops repeat values
+
+and how output is constructed. Before learning nested loops, students
+
+should first understand how to create a pattern using one loop.
+
+We normally create an empty string, add a value during each iteration
+
+and print the final result.
+
+Example:
+
+let pattern = "";
+
+for(let i = 1; i <= 5; i++) {
+
+pattern = pattern + "*";
+
+}
+
+console.log(pattern);
+
+Output:
+
+*****
+
+============================================================
+
+12. NUMBER PATTERN USING SINGLE LOOP
+
+============================================================
+
+let pattern = "";
+
+for(let i = 1; i <= 5; i++) {
+
+pattern = pattern + i + " ";
+
+}
+
+console.log(pattern);
+
+Output:
+
+1 2 3 4 5
+
+============================================================
+
+13. NESTED FOR LOOP
+
+============================================================
+
+NOTES:
+
+A nested loop means placing one loop inside another loop. The outer loop
+
+usually controls rows and the inner loop controls columns. For every one
+
+execution of the outer loop, the inner loop completes all of its
+
+iterations.
+
+Nested loops are important for pattern programs, tables, matrices,
+
+two-dimensional arrays and grid-based logic. Understanding rows and
+
+columns is the easiest way to understand nested loops.
+
+Syntax:
+
+for(let i = 1; i <= rows; i++) {
+
+for(let j = 1; j <= columns; j++) {
+
+// code
+
+}
+
+}
+
+Outer Loop:
+
+i -> Row
+
+Inner Loop:
+
+j -> Column
+
+============================================================
+
+14. UNDERSTANDING NESTED LOOP
+
+============================================================
+
+for(let i = 1; i <= 3; i++) {
+
+for(let j = 1; j <= 3; j++) {
+
+console.log(i, j);
+
+}
+
+}
+
+Output:
+
+1 1
+
+1 2
+
+1 3
+
+2 1
+
+2 2
+
+2 3
+
+3 1
+
+3 2
+
+3 3
+
+Explanation:
+
+When:
+
+i = 1
+
+Inner loop:
+
+j = 1
+
+j = 2
+
+j = 3
+
+Then:
+
+i = 2
+
+Inner loop starts again:
+
+j = 1
+
+j = 2
+
+j = 3
+
+Then:
+
+i = 3
+
+Inner loop:
+
+j = 1
+
+j = 2
+
+j = 3
+
+============================================================
+
+15. SQUARE STAR PATTERN
+
+============================================================
+
+Output:
+
+* * * *
+
+* * * *
+
+* * * *
+
+* * * *
+
+Code:
+
+for(let i = 1; i <= 4; i++) {
+
+let row = "";
+
+for(let j = 1; j <= 4; j++) {
+
+row = row + "* ";
+
+}
+
+console.log(row);
+
+}
+
+Here:
+
+Outer Loop -> Number of Rows
+
+Inner Loop -> Number of Stars in each Row
+
+============================================================
+
+16. INCREASING STAR PATTERN
+
+============================================================
+
+Output:
+
+*
+
+* *
+
+* * *
+
+* * * *
+
+* * * * *
+
+Code:
+
+for(let i = 1; i <= 5; i++) {
+
+let row = "";
+
+for(let j = 1; j <= i; j++) {
+
+row = row + "* ";
+
+}
+
+console.log(row);
+
+}
+
+Understanding:
+
+i = 1 -> 1 Star
+
+i = 2 -> 2 Stars
+
+i = 3 -> 3 Stars
+
+i = 4 -> 4 Stars
+
+i = 5 -> 5 Stars
+
+The important condition is:
+
+j <= i
+
+============================================================
+
+17. DECREASING STAR PATTERN
+
+============================================================
+
+Output:
+
+* * * * *
+
+* * * *
+
+* * *
+
+* *
+
+*
+
+Code:
+
+for(let i = 5; i >= 1; i--) {
+
+let row = "";
+
+for(let j = 1; j <= i; j++) {
+
+row = row + "* ";
+
+}
+
+console.log(row);
+
+}
+
+============================================================
+
+18. NUMBER PATTERN
+
+============================================================
+
+Output:
+
+1
+
+1 2
+
+1 2 3
+
+1 2 3 4
+
+1 2 3 4 5
+
+Code:
+
+for(let i = 1; i <= 5; i++) {
+
+let row = "";
+
+for(let j = 1; j <= i; j++) {
+
+row = row + j + " ";
+
+}
+
+console.log(row);
+
+}
+
+============================================================
+
+19. SAME NUMBER ROW PATTERN
+
+============================================================
+
+Output:
+
+1
+
+2 2
+
+3 3 3
+
+4 4 4 4
+
+5 5 5 5 5
+
+Code:
+
+for(let i = 1; i <= 5; i++) {
+
+let row = "";
+
+for(let j = 1; j <= i; j++) {
+
+row = row + i + " ";
+
+}
+
+console.log(row);
+
+}
+
+Difference:
+
+row = row + j;
+
+prints:
+
+1
+
+1 2
+
+1 2 3
+
+row = row + i;
+
+prints:
+
+1
+
+2 2
+
+3 3 3
+
+============================================================
+
+20. MULTIPLICATION TABLE USING NESTED LOOP
+
+============================================================
+
+for(let i = 1; i <= 5; i++) {
+
+console.log("Table " + i);
+
+for(let j = 1; j <= 10; j++) {
+
+console.log(i + " x " + j + " = " + (i * j));
+
+}
+
+}
+
+Outer Loop:
+
+Controls table number.
+
+Inner Loop:
+
+Controls multiplication from 1 to 10.
+
+============================================================
+
+IMPORTANT LOOP CONCEPTS TO LEARN
+
+============================================================
+
+Students should understand these concepts in this order:
+
+1. Initialization
+
+let i = 1;
+
+2. Condition
+
+i <= 10;
+
+3. Increment
+
+i++;
+
+4. Decrement
+
+i--;
+
+5. Increment by multiple values
+
+i += 2;
+
+6. Forward Loop
+
+for(let i = 1; i <= 10; i++)
+
+7. Reverse Loop
+
+for(let i = 10; i >= 1; i--)
+
+8. Loop + if Condition
+
+if(i % 2 === 0)
+
+9. Accumulator
+
+let sum = 0;
+
+sum = sum + i;
+
+10. String Accumulator
+
+let row = "";
+
+row = row + "*";
+
+11. Nested Loop
+
+Outer Loop -> Rows
+
+Inner Loop -> Columns
+
+12. Pattern Logic
+
+j <= i
+
+============================================================
+
+DAY 2 LEARNING ORDER
+
+============================================================
+
+Truthy / Falsy
+
+↓
+
+var / let / const
+
+↓
+
+Increment / Decrement
+
+↓
+
+for Loop Syntax
+
+↓
+
+Loop Execution Flow
+
+↓
+
+1 to 10
+
+↓
+
+10 to 1
+
+↓
+
+Even / Odd
+
+↓
+
+Loop + Condition
+
+↓
+
+Multiplication Table
+
+↓
+
+Sum of Numbers
+
+↓
+
+Single Line Pattern
+
+↓
+
+Nested Loop
+
+↓
+
+Rows + Columns
+
+↓
+
+Square Pattern
+
+↓
+
+Increasing Pattern
+
+↓
+
+Decreasing Pattern
+
+↓
+
+Number Pattern
+
+============================================================
+
+INTERVIEW QUICK NOTES
+
+============================================================
+
+Q: What is a loop?
+
+A loop is used to execute a block of code repeatedly.
+
+Q: When should we use a for loop?
+
+We use a for loop when the number of iterations is known.
+
+Q: What are the three main parts of a for loop?
+
+Initialization, Condition and Increment/Decrement.
+
+Q: What is a nested loop?
+
+A loop inside another loop is called a nested loop.
+
+Q: What does the outer loop control in pattern programs?
+
+Rows.
+
+Q: What does the inner loop control?
+
+Columns or values inside each row.
+
+Q: Difference between let and const?
+
+let allows reassignment.
+
+const does not allow reassignment.
+
+Q: What is a Truthy value?
+
+A value that behaves as true in a Boolean condition.
+
+Q: What is a Falsy value?
+
+A value that behaves as false in a Boolean condition.
+
+Q: Give common Falsy values.
+
+false
+
+0
+
+""
+
+null
+
+undefined
+
+NaN
+
+============================================================
+
+DAY 2 FINAL FLOW
+
+============================================================
+
+JS Basics
+
+↓
+
+Truthy / Falsy
+
+↓
+
+var / let / const
+
+↓
+
+Increment / Decrement
+
+↓
+
+for Loop
+
+↓
+
+Single Value
+
+↓
+
+Multiple Values
+
+↓
+
+Condition inside Loop
+
+↓
+
+Calculation using Loop
+
+↓
+
+Pattern
+
+↓
+
+Nested Loop
+
+↓
+
+Rows + Columns
+
+↓
+
+Star Pattern
+
+↓
+
+Number Pattern
+
+↓
+
+Logical Programs
+
+============================================================

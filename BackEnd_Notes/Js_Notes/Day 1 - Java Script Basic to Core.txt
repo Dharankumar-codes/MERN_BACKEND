@@ -1,0 +1,885 @@
+JAVASCRIPT BASIC NOTES
+
+FOLDER
+
+Folder is used to store and organize files.
+
+Example:
+
+Student/
+
+│
+
+├── index.html
+
+├── style.css
+
+├── script.js
+
+├── App.jsx
+
+└── data.txt
+
+FILE EXTENSIONS
+
+HTML - .html
+
+CSS - .css
+
+JavaScript - .js
+
+React - .jsx
+
+TypeScript - .tsx
+
+XML - .xml
+
+Text - .txt
+
+PDF - .pdf
+
+Excel - .xlsx
+
+GIT
+
+Git is a software used to track and manage code changes locally.
+
+Git tracks:
+
+- File changes
+
+- Code changes
+
+- Previous versions
+
+Basic Git Commands:
+
+git init
+
+git status
+
+git add .
+
+git commit -m "message"
+
+GITHUB
+
+GitHub is a cloud-based website used to store and manage code online.
+
+GitHub is used for:
+
+- Cloud code storage
+
+- Project sharing
+
+- Team collaboration
+
+- Open source projects
+
+- Version control
+
+Flow:
+
+Local Project → Git → GitHub
+
+LINKEDIN
+
+LinkedIn is a professional networking platform.
+
+Used for:
+
+- Creating professional profile
+
+- Job searching
+
+- Connecting with professionals
+
+- Sharing projects
+
+- Building network
+
+RESUME
+
+Resume is a professional document containing:
+
+- Personal Details
+
+- Skills
+
+- Education
+
+- Experience
+
+- Projects
+
+- Certifications
+
+- Contact Details
+
+========================================
+
+JAVASCRIPT BASICS
+
+========================================
+
+JAVASCRIPT
+
+JavaScript is a programming language used to make websites dynamic and interactive.
+
+JAVASCRIPT EXECUTION
+
+JavaScript works mainly in two phases:
+
+1. Memory Creation Phase
+
+2. Code Execution Phase
+
+Example:
+
+var a = 10;
+
+console.log(a);
+
+Memory Phase:
+
+a → undefined
+
+Execution Phase:
+
+a → 10
+
+SYNTAX
+
+Syntax means rules for writing programming code.
+
+Correct Syntax:
+
+let age = 25;
+
+Incorrect Syntax:
+
+let age = ;
+
+VARIABLE
+
+Variables are used to store data in memory.
+
+JavaScript provides three keywords:
+
+var
+
+let
+
+const
+
+VAR
+
+Syntax:
+
+var variableName = value;
+
+Example:
+
+var age = 20;
+
+LET
+
+Syntax:
+
+let variableName = value;
+
+Example:
+
+let name = "John";
+
+CONST
+
+Syntax:
+
+const variableName = value;
+
+Example:
+
+const pi = 3.14;
+
+VARIABLE DECLARATION
+
+Declaration means creating a variable.
+
+Syntax:
+
+var a;
+
+let b;
+
+const c = 10;
+
+If value is not assigned:
+
+var a;
+
+console.log(a);
+
+Output:
+
+undefined
+
+VARIABLE NAMING RULES
+
+1. Variable name cannot start with a number.
+
+Wrong:
+
+var 1name = "John";
+
+Correct:
+
+var name1 = "John";
+
+2. Variable name can use:
+
+Letters
+
+Numbers
+
+Underscore (_)
+
+Dollar sign ($)
+
+Example:
+
+var name;
+
+var name1;
+
+var _name;
+
+var $name;
+
+3. Spaces are not allowed.
+
+Wrong:
+
+var first name = "John";
+
+Correct:
+
+var firstName = "John";
+
+CASING CONVENTIONS
+
+camelCase
+
+First word starts with lowercase.
+
+Next words start with uppercase.
+
+Example:
+
+firstName
+
+studentAge
+
+totalAmount
+
+PascalCase
+
+Every word starts with uppercase.
+
+Example:
+
+FirstName
+
+StudentDetails
+
+UserProfile
+
+snake_case
+
+Words are separated using underscore.
+
+Example:
+
+first_name
+
+student_age
+
+kebab-case
+
+Words are separated using hyphen.
+
+Example:
+
+first-name
+
+student-age
+
+Mostly used in CSS and HTML.
+
+SCOPE
+
+Scope means where a variable can be accessed.
+
+Global Scope
+
+A variable declared outside a block or function.
+
+Example:
+
+let name = "John";
+
+function test() {
+
+console.log(name);
+
+}
+
+Local Scope
+
+A variable declared inside a function or block.
+
+Example:
+
+function test() {
+
+let age = 20;
+
+console.log(age);
+
+}
+
+BLOCK SCOPE
+
+Variables declared using let and const follow block scope.
+
+Example:
+
+{
+
+let a = 10;
+
+const b = 20;
+
+}
+
+VAR does not follow block scope.
+
+Example:
+
+{
+
+var a = 10;
+
+}
+
+console.log(a);
+
+STATEMENT
+
+A statement is a complete instruction given to JavaScript.
+
+Example:
+
+let age = 20;
+
+console.log(age);
+
+EXPRESSION
+
+An expression produces a value.
+
+Example:
+
+10 + 20
+
+age + 5
+
+5 * 10
+
+Example:
+
+let result = 10 + 20;
+
+Here:
+
+10 + 20 → Expression
+
+let result = 10 + 20; → Statement
+
+DATA TYPES
+
+Data types define what type of data is stored.
+
+PRIMITIVE DATA TYPES
+
+String
+
+let name = "John";
+
+Number
+
+let age = 25;
+
+Boolean
+
+let isLogin = true;
+
+Undefined
+
+let a;
+
+Null
+
+let data = null;
+
+BigInt
+
+let number = 123456789n;
+
+Symbol
+
+let id = Symbol("id");
+
+NON-PRIMITIVE DATA TYPES
+
+Array
+
+let fruits = ["Apple", "Mango", "Orange"];
+
+Object
+
+let student = {
+
+name: "John",
+
+age: 20
+
+};
+
+Function
+
+function greet() {
+
+console.log("Hello");
+
+}
+
+OPERATORS
+
+Operators are symbols used to perform operations.
+
+ARITHMETIC OPERATORS
+
++ Addition
+
+- Subtraction
+
+* Multiplication
+
+/ Division
+
+% Modulus
+
+** Exponent
+
+Example:
+
+let a = 10;
+
+let b = 5;
+
+console.log(a + b);
+
+console.log(a - b);
+
+console.log(a * b);
+
+console.log(a / b);
+
+console.log(a % b);
+
+ASSIGNMENT OPERATORS
+
+= Assignment
+
++= Add and assign
+
+-= Subtract and assign
+
+*= Multiply and assign
+
+/= Divide and assign
+
+Example:
+
+let a = 10;
+
+a += 5;
+
+COMPARISON OPERATORS
+
+== Equal value
+
+=== Equal value and type
+
+!= Not equal
+
+!== Not equal value or type
+
+> Greater than
+
+< Less than
+
+>= Greater than or equal
+
+<= Less than or equal
+
+Example:
+
+10 == "10" // true
+
+10 === "10" // false
+
+LOGICAL OPERATORS
+
+&& AND
+
+|| OR
+
+! NOT
+
+Example:
+
+let age = 20;
+
+age > 18 && age < 60
+
+SELECTION STATEMENTS
+
+Selection statements are used to control program flow based on conditions.
+
+IF
+
+Syntax:
+
+if(condition) {
+
+// code
+
+}
+
+Example:
+
+let age = 20;
+
+if(age >= 18) {
+
+console.log("Eligible");
+
+}
+
+IF ELSE
+
+Syntax:
+
+if(condition) {
+
+// true code
+
+} else {
+
+// false code
+
+}
+
+Example:
+
+let age = 16;
+
+if(age >= 18) {
+
+console.log("Eligible");
+
+} else {
+
+console.log("Not Eligible");
+
+}
+
+ELSE IF
+
+Syntax:
+
+if(condition1) {
+
+} else if(condition2) {
+
+} else {
+
+}
+
+Example:
+
+let mark = 75;
+
+if(mark >= 90) {
+
+console.log("A Grade");
+
+} else if(mark >= 60) {
+
+console.log("B Grade");
+
+} else {
+
+console.log("Fail");
+
+}
+
+SWITCH
+
+Syntax:
+
+switch(value) {
+
+case value1:
+
+// code
+
+break;
+
+case value2:
+
+// code
+
+break;
+
+default:
+
+// code
+
+}
+
+Example:
+
+let day = 1;
+
+switch(day) {
+
+case 1:
+
+console.log("Monday");
+
+break;
+
+case 2:
+
+console.log("Tuesday");
+
+break;
+
+default:
+
+console.log("Invalid");
+
+}
+
+TYPE CONVERSION
+
+Type conversion means changing one data type into another.
+
+IMPLICIT TYPE CONVERSION
+
+JavaScript automatically converts data type.
+
+Example:
+
+console.log("10" + 5);
+
+Output:
+
+105
+
+Example:
+
+console.log("10" - 5);
+
+Output:
+
+5
+
+EXPLICIT TYPE CONVERSION
+
+Developer manually converts data type.
+
+String Conversion
+
+String(10)
+
+Number Conversion
+
+Number("10")
+
+Boolean Conversion
+
+Boolean(1)
+
+Example:
+
+let value = "100";
+
+let result = Number(value);
+
+console.log(result);
+
+FUNCTION
+
+Function is a reusable block of code.
+
+FUNCTION DECLARATION
+
+Syntax:
+
+function functionName() {
+
+// code
+
+}
+
+Example:
+
+function greet() {
+
+console.log("Hello");
+
+}
+
+FUNCTION CALL
+
+greet();
+
+FUNCTION WITH PARAMETERS
+
+function greet(name) {
+
+console.log(name);
+
+}
+
+greet("John");
+
+FUNCTION WITH RETURN
+
+function add(a, b) {
+
+return a + b;
+
+}
+
+let result = add(10, 20);
+
+console.log(result);
+
+STORAGE
+
+JavaScript stores data in memory.
+
+Example:
+
+let name = "John";
+
+Memory:
+
+name → "John"
+
+STATIC WEBSITE
+
+Static website content does not change dynamically.
+
+Example:
+
+HTML
+
+CSS
+
+DYNAMIC WEBSITE
+
+Dynamic website content can change based on:
+
+- User interaction
+
+- Database
+
+- API
+
+- JavaScript
+
+DOM
+
+DOM stands for Document Object Model.
+
+JavaScript uses DOM to access and modify HTML elements.
+
+Example HTML:
+
+<h1 id="title">Hello</h1>
+
+JavaScript:
+
+document.getElementById("title");
+
+Changing Content:
+
+document.getElementById("title").innerHTML = "Welcome";
+
+Changing CSS:
+
+document.getElementById("title").style.color = "red";
+
+JavaScript Basic Flow:
+
+Memory
+
+↓
+
+Execution
+
+↓
+
+Syntax
+
+↓
+
+Variables
+
+↓
+
+Data Types
+
+↓
+
+Operators
+
+↓
+
+Conditions
+
+↓
+
+Functions
+
+↓
+
+Type Conversion
+
+↓
+
+Scope
+
+↓
+
+Static and Dynamic
+
+↓
+
+DOM
