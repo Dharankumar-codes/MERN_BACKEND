@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Tasks</title>
+</head>
+<body>
+
+<script>
+
+// TASK 1 – Student Names
+
+let students = ["Arun", "Bala", "Kumar", "Ravi", "Suresh"];
+
+console.log(students[0]);
+console.log(students[2]);
+console.log(students[4]);
+
+
+// TASK 2 – Product Prices
+
+let prices = [1500, 2500, 3500, 4500, 5500];
+
+let firstPrice = prices[0];
+let middlePrice = prices[2];
+let lastPrice = prices[4];
+
+let total = firstPrice + lastPrice;
+
+console.log(firstPrice);
+console.log(middlePrice);
+console.log(lastPrice);
+console.log(total);
+
+
+// TASK 3 – Find Array Value Using Index
+
+let arr = ["HTML", "CSS", "JavaScript", "React", "Node"];
+
+let javascriptValue = arr[2];
+let reactValue = arr[3];
+let nodeValue = arr[arr.length - 1];
+
+console.log(javascriptValue);
+console.log(reactValue);
+console.log(nodeValue);
+
+
+// TASK 4 – Nested Array Access
+
+let data = [
+    ["Arun", 80],
+    ["Bala", 75],
+    ["Kumar", 90]
+];
+
+let arunName = data[0][0];
+let arunMark = data[0][1];
+let balaName = data[1][0];
+let kumarMark = data[2][1];
+
+console.log(arunName);
+console.log(arunMark);
+console.log(balaName);
+console.log(kumarMark);
+
+
+// TASK 5 – Logical Array Access
+
+let numbers = [10, 20, 30, 40, 50];
+
+let secondValue = numbers[1];
+let secondLastValue = numbers[numbers.length - 2];
+
+let answer = secondValue + secondLastValue;
+
+console.log(secondValue);
+console.log(secondLastValue);
+console.log(answer);
+
+</script>
+
+</body>
+</html>

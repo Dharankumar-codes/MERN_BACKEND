@@ -1,0 +1,1 @@
+Topics Covered: Variables Datatypes Operators Conditions Loops Nested Loops Functions Arrays Objects Array of Objects map() filter() find() reduce() Callback Closure Promise Async/Await

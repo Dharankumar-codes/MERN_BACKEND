@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Methods Tasks</title>
+</head>
+<body>
+
+<script>
+
+// TASK 1 – MAP
+
+let salaries = [15000, 20000, 25000, 30000, 35000];
+
+let updatedSalaries = salaries.map((salary) => salary + 2000);
+
+console.log(salaries);
+console.log(updatedSalaries);
+
+
+// TASK 2 – FILTER
+
+let marks = [35, 78, 42, 90, 25, 67, 55];
+
+let eligibleMarks = marks.filter((mark) => mark >= 50);
+
+console.log(eligibleMarks);
+
+
+// TASK 3 – FIND
+
+let products = [
+    { id: 101, name: "Laptop", price: 55000 },
+    { id: 102, name: "Mouse", price: 800 },
+    { id: 103, name: "Keyboard", price: 1500 },
+    { id: 104, name: "Monitor", price: 12000 }
+];
+
+let selectedProduct = products.find((product) => product.id === 103);
+
+console.log(selectedProduct);
+console.log(selectedProduct.name);
+
+
+// TASK 4 – REDUCE
+
+let cart = [
+    { name: "Shirt", price: 1200 },
+    { name: "Shoes", price: 2500 },
+    { name: "Watch", price: 3000 },
+    { name: "Bag", price: 1500 }
+];
+
+let totalPrice = cart.reduce((total, item) => total + item.price, 0);
+
+console.log(totalPrice);
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callback Promise Task</title>
+</head>
+<body>
+
+<script>
+
+// TASK 1 – CALLBACK
+
+const calculate = (a, b, callback) => {
+
+    let sum = a + b;
+
+    callback(sum);
+};
+
+calculate(10, 20, (answer) => {
+    console.log(answer);
+});
+
+
+// TASK 2 – PROMISE
+
+const checkNumber = (number) => {
+
+    let result = new Promise((resolve, reject) => {
+
+        if (number > 10) {
+            resolve("Valid Number");
+        } else {
+            reject("Invalid Number");
+        }
+
+    });
+
+    return result;
+};
+
+checkNumber(20)
+.then((message) => {
+    console.log(message);
+})
+.catch((message) => {
+    console.log(message);
+});
+
+</script>
+
+</body>
+</html>

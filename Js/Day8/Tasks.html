@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Logical Tasks</title>
+</head>
+<body>
+
+<script>
+
+// TASK 1 – ELECTRICITY BILL
+
+let customerName = "Arun";
+let unitsConsumed = 250;
+let bill = 0;
+
+if (unitsConsumed <= 100) {
+    bill = unitsConsumed * 2;
+} else if (unitsConsumed <= 200) {
+    bill = (100 * 2) + ((unitsConsumed - 100) * 3);
+} else {
+    bill = (100 * 2) + (100 * 3) + ((unitsConsumed - 200) * 5);
+}
+
+console.log("Customer:", customerName);
+console.log("Electricity Bill:", bill);
+
+
+// TASK 2 – ATM CASH WITHDRAWAL
+
+let balance = 15000;
+let withdrawAmount = 4000;
+
+if (withdrawAmount <= 0) {
+    console.log("Enter a valid amount");
+} else if (withdrawAmount % 500 != 0) {
+    console.log("Amount should be a multiple of 500");
+} else if (withdrawAmount > balance) {
+    console.log("Insufficient balance");
+} else {
+    balance = balance - withdrawAmount;
+    console.log("Withdrawal successful");
+    console.log("Remaining balance:", balance);
+}
+
+
+
+
+
+// TASK 4 – MULTIPLICATION BILL TABLE
+
+let productPrice = 250;
+
+for (let quantity = 1; quantity <= 5; quantity++) {
+
+    let totalPrice = quantity * productPrice;
+
+    console.log("Quantity " + quantity + " = ₹" + totalPrice);
+}
+
+
+// TASK 5 – SEAT BOOKING DISPLAY
+
+let rows = 3;
+let seats = 5;
+
+for (let row = 1; row <= rows; row++) {
+
+    for (let seat = 1; seat <= seats; seat++) {
+
+        console.log("Row " + row + " - Seat " + seat);
+
+    }
+}
+
+
+// TASK 6 – DELIVERY CHARGE FUNCTION
+
+const calculateDelivery = (amount) => {
+
+    let deliveryCharge = 0;
+
+    if (amount >= 1000) {
+        deliveryCharge = 0;
+    } else if (amount >= 500) {
+        deliveryCharge = 50;
+    } else {
+        deliveryCharge = 100;
+    }
+
+    return amount + deliveryCharge;
+};
+
+let finalAmount = calculateDelivery(800);
+
+console.log("Final Amount:", finalAmount);
+
+
+// TASK 7 – FIND HIGHEST SALES
+
+let sales = [12000, 18000, 9500, 25000, 16000];
+
+let highest = sales[0];
+
+for (let i = 1; i < sales.length; i++) {
+
+    if (sales[i] > highest) {
+        highest = sales[i];
+    }
+}
+
+console.log("Highest Sales:", highest);
+
+</script>
+
+</body>
+</html>
