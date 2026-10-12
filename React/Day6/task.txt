@@ -1,0 +1,11 @@
+ 1. What is a Virtual DOM?
+
+Answer: The Virtual DOM is a lightweight copy of the real DOM. React uses it to identify changes in the user interface and update only the necessary parts of the real DOM, improving performance.
+
+ 2. What are the ES6+ features used by React?
+
+Answer: ES6+ features are modern JavaScript features that make code simpler and easier to maintain. React commonly uses arrow functions, let and const, destructuring, spread operators, template literals, import/export, and array methods like map() and filter().
+
+ 3. What is the purpose of class in React?
+
+Answer: In React, className is used to apply CSS styles to elements in JSX. It works like the `class` attribute in HTML. React uses className because class is a reserved keyword in JavaScript.
