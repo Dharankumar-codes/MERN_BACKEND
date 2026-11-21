@@ -1,0 +1,5 @@
+
+Platform: win32
+Architecture: x64
+Hostname: Dharan
+Total RAM: 16858472448
